@@ -1,9 +1,9 @@
 dnl Process this file with autoconf to produce a configure script.
 
-AC_INIT(lightdm-webkit2-greeter, 2.1.0rc1)
+AC_INIT([lightdm-webkit2-greeter],[2.1.0rc1])
 AC_SUBST(THEME_DIR)
-AC_CONFIG_HEADER(config.h)
-AC_PREREQ([2.59])
+AC_CONFIG_HEADERS([config.h])
+AC_PREREQ([2.71])
 
 LT_INIT()
 
@@ -81,8 +81,8 @@ dnl ###########################################################################
 dnl ###########################################################################
 
 AC_ARG_ENABLE([at-spi-command],
-    AC_HELP_STRING([--enable-at-spi-command[=command]], [Try to start at-spi service]])
-    AC_HELP_STRING([--disable-at-spi-command], [Do not start at-spi service]),
+    AS_HELP_STRING([--enable-at-spi-command[=command]],[Try to start at-spi service])]
+    AS_HELP_STRING([--disable-at-spi-command],[Do not start at-spi service]),
     [], [])
 
 AS_IF([test "x$enable_at_spi_command" != "xno"],
@@ -105,7 +105,7 @@ dnl ###########################################################################
 dnl Files to generate
 dnl ###########################################################################
 
-AC_OUTPUT([
+AC_CONFIG_FILES([
 Makefile
 data/Makefile
 man/Makefile
@@ -114,6 +114,7 @@ po/Makefile.in
 themes/Makefile
 themes/simple/Makefile
 ])
+AC_OUTPUT
 
 dnl ###########################################################################
 dnl Summary
