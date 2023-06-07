@@ -4,14 +4,16 @@
 srcdir=`dirname $0`
 test -z "$srcdir" && srcdir=.
 
-(test -f $srcdir/configure.ac && test -d $srcdir/src) || {
+REQUIRED_AUTOMAKE_VERSION=1.9
+
+PKG_NAME="Gnome Common Macros"
+
+(test -f $srcdir/configure.ac \
+## put other tests here
+) || {
     echo -n "**Error**: Directory "\`$srcdir\'" does not look like the"
-    echo " top-level lightdm-webkit2-greeter directory"
+    echo " top-level $PKG_NAME directory"
     exit 1
 }
 
-which gnome-autogen.sh || {
-    echo "You need to install gnome-common from the GNOME CVS"
-    exit 1
-}
-. gnome-autogen.sh
+. $srcdir/macros2/gnome-autogen.sh
