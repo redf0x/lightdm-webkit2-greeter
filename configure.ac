@@ -1,6 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
 
-AC_INIT([lightdm-webkit2-greeter],[2.1.0rc1])
+AC_INIT([lightdm-webkit2-greeter],[2.1.1])
 AC_SUBST(THEME_DIR)
 AC_CONFIG_HEADERS([config.h])
 AC_PREREQ([2.71])
