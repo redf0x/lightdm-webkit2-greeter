@@ -3,7 +3,7 @@
 
 srcdir=`dirname $0`
 test -z "$srcdir" && srcdir=.
-
+export ACLOCAL_PATH="$srcdir/macros2"
 REQUIRED_AUTOMAKE_VERSION=1.9
 
 PKG_NAME="Gnome Common Macros"
