@@ -21,16 +21,12 @@ dnl ###########################################################################
 PKG_CHECK_MODULES([GREETER], [
     liblightdm-gobject-1
     gtk+-3.0
-    webkit2gtk-4.0
+    webkit2gtk-4.1
     dbus-glib-1
     x11
 ])
 
-dnl PKG_CHECK_MODULES(WEB_EXTENSION, [webkit2gtk-4.0 >= 2.8.0])
-dnl AC_SUBST(WEB_EXTENSION_CFLAGS)
-dnl AC_SUBST(WEB_EXTENSION_LIBS)
-
-PKG_CHECK_MODULES([WEB_EXTENSION], [webkit2gtk-web-extension-4.0 >= 2.8.0])
+PKG_CHECK_MODULES([WEB_EXTENSION], [webkit2gtk-web-extension-4.1 >= 2.40])
 AC_SUBST([WEB_EXTENSION_CFLAGS])
 AC_SUBST([WEB_EXTENSION_LIBS])
 
